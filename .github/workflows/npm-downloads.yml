@@ -1,8 +1,8 @@
 name: NPM Downloads
 
-# 📦 Package Strategy: Hybrid (5 packages)
+# 📦 Package Strategy: Hybrid (4 packages)
 # - 1 SDK package: aegis-vault-sdk
-# - 4 ecosystem packages: aegis-vault-protocol, aegis-vault-utils, aegis-vault-types, aegis-vault
+# - 3 ecosystem packages: aegis-vault-protocol, aegis-vault-utils, aegis-vault-types
 # Total daily downloads: 24,000 (60 rounds × 10 batches × 4 packages per round)
 
 on:
@@ -34,7 +34,6 @@ jobs:
             "aegis-vault-protocol"
             "aegis-vault-utils"
             "aegis-vault-types"
-            "aegis-vault"
           )
           
           for i in {1..60}; do
@@ -69,7 +68,6 @@ jobs:
             "aegis-vault-protocol"
             "aegis-vault-utils"
             "aegis-vault-types"
-            "aegis-vault"
           )
           
           for pkg in "${PACKAGES[@]}"; do
