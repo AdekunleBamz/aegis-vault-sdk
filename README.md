@@ -25,6 +25,25 @@ const stakeTx = sdk.buildStakeTxOptionsFromStx('10', 7, 'SP123...YOUR_ADDRESS');
 console.log(stakeTx.functionName, stakeTx.functionArgs);
 ```
 
+## Integrated Helpers
+
+The SDK now includes the shared helpers that used to live in the separate
+`aegis-vault-types`, `aegis-vault-utils`, and lightweight protocol package.
+
+```js
+import {
+  createStacksAddress,
+  formatAddress,
+  getProtocolConfig,
+  validateStacksAddress,
+} from 'aegis-vault-sdk';
+
+const protocol = getProtocolConfig();
+const wallet = createStacksAddress('SP3FKNEZ86RG5RT7SZ5FBRGH85FZNG94ZH1MCGG6N');
+const shortAddress = formatAddress(wallet.address);
+const isValid = validateStacksAddress(wallet.address);
+```
+
 ## What the SDK includes
 
 - Read-only helpers:
@@ -45,6 +64,19 @@ console.log(stakeTx.functionName, stakeTx.functionArgs);
   - `buildRequestWithdrawalTxOptions`
   - `buildCompleteWithdrawalTxOptions`
   - `buildEmergencyWithdrawTxOptions`
+- Shared utilities:
+  - `formatAddress`
+  - `validateStacksAddress`
+  - `validateStacksAddressResult`
+  - `formatTokenAmount`
+  - `formatLockPeriodDays`
+  - `retry`
+- Protocol helpers:
+  - `initializeProtocol`
+  - `getProtocolVersion`
+  - `getProtocolConfig`
+  - `createStacksAddress`
+  - `normalizeVaultConfig`
 
 ## Build and Test
 
