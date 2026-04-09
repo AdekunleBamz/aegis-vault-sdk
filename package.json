@@ -41,12 +41,12 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/AdekunleBamz/aegis-vault-sdk.git"
+    "url": "git+https://github.com/AdekunleBamz/aegis-vault.git"
   },
   "bugs": {
-    "url": "https://github.com/AdekunleBamz/aegis-vault-sdk/issues"
+    "url": "https://github.com/AdekunleBamz/aegis-vault/issues"
   },
-  "homepage": "https://github.com/AdekunleBamz/aegis-vault-sdk#readme",
+  "homepage": "https://github.com/AdekunleBamz/aegis-vault#readme",
   "publishConfig": {
     "access": "public"
   },
